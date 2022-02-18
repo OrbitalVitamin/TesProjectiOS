@@ -2,8 +2,8 @@
 //  Home.swift
 //  TesProject
 //
-//  Created by Alex Balaria on 24/05/2020.
-//  Copyright © 2020 Alex Balaria. All rights reserved.
+//  Created by OrbitalVitamin on 24/05/2020.
+//  Copyright © 2020 OrbitalVitamin. All rights reserved.
 //
 
 import SwiftUI
@@ -43,7 +43,6 @@ struct Home: View {
 }
 
 struct TutorMatches: View {
-
     @State var users: [User] = []
     @State var showDialog: Bool
     @State var user: User
@@ -56,7 +55,7 @@ struct TutorMatches: View {
                     self.showDialog = true
                 }
                 
-            }.onAppear() {
+            }.background(Color.white).onAppear() {
                 UITableView.appearance().separatorStyle = .none
                 Api().getData(restOfUrl: "/tutors/find_matches/2") { (data) in
                 self.users = self.parseJson(data: data)
@@ -97,7 +96,7 @@ struct TuteeMatches: View {
                     self.showDialog = true
                 }
                 
-            }.onAppear() {
+            }.background(Color.white).onAppear() {
                 UITableView.appearance().separatorStyle = .none
                 Api().getData(restOfUrl: "/tutees/find_matches/2") { (data) in
                     self.users = self.parseJson(data: data)

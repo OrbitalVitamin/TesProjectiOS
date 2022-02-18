@@ -2,8 +2,8 @@
 //  UserListItem.swift
 //  TesProject
 //
-//  Created by Alex Balaria on 26/05/2020.
-//  Copyright © 2020 Alex Balaria. All rights reserved.
+//  Created by OrbitalVitamin on 26/05/2020.
+//  Copyright © 2020 OrbitalVitamin. All rights reserved.
 //
 
 import SwiftUI
@@ -13,29 +13,32 @@ struct UserListItem: View {
     
     
     var body: some View {
-        HStack(spacing: 25){
-        
-            VStack(spacing: 5){
-                HStack{
-                   Text(user.getName()).padding(.bottom).font(.system(size: 15))
-                    Spacer()
-                    
-                    Text("Year: \(user.getYear())").padding(.bottom).font(.system(size: 15))
+        GeometryReader { metrics in
+            HStack(spacing: 25){
+            
+                VStack(spacing: 5){
+                    HStack{
+                       Text(user.getName()).padding(.bottom).font(.system(size: 15))
+                        Spacer()
+                        
+                        Text("Year: \(user.getYear())").padding(.bottom).font(.system(size: 15))
 
-                }
-                HStack{
-                    Text("Subjects: " + stringBuilder(strings: user.getSubjects())).font(.system(size: 12))
-                    Spacer()
+                    }
+                    HStack{
+                        Text("Subjects: " + stringBuilder(strings: user.getSubjects())).font(.system(size: 12))
+                        Spacer()
 
+                    }
+                    HStack{
+                        Text("decription: " + user.getDescription()).font(.system(size: 12))
+                        Spacer()
+                    }
                 }
-                HStack{
-                    Text("decription: " + user.getDescription()).font(.system(size: 12))
-                    Spacer()
-                }
+                
+                
+            }.padding(15).frame(width: metrics.size.width).overlay(RoundedRectangle (cornerRadius: 25).stroke(Color.gray).shadow(radius: 5))
             }
-            
-            
-            }.padding(15).frame(width: 350).background(Color.white).overlay(RoundedRectangle (cornerRadius: 25).stroke(Color.gray).shadow(radius: 5))
+    
     }
     
     func stringBuilder(strings: [String]) -> String {

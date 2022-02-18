@@ -2,8 +2,8 @@
 //  ApiRequests.swift
 //  TesProject
 //
-//  Created by Alex Balaria on 28/05/2020.
-//  Copyright © 2020 Alex Balaria. All rights reserved.
+//  Created by OrbitalVitamin on 28/05/2020.
+//  Copyright © 2020 OrbitalVitamin. All rights reserved.
 //
 
 import Foundation
@@ -14,7 +14,7 @@ struct retrievedData: Codable {
 
 
 class Api {
-    let urlString = "http://tesproject.da79257e9143445ebbdf.westus2.aksapp.io"
+    let urlString = "http://localhost:8090"
     func getData(restOfUrl: String, completion: @escaping (Data) -> ()) {
         let mergedUr = urlString + restOfUrl
         let correctedUrl = mergedUr.replacingOccurrences(of: " ", with: "%20")

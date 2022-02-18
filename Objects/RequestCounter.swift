@@ -2,8 +2,8 @@
 //  RequestCounter.swift
 //  TesProject
 //
-//  Created by Alex Balaria on 30/05/2020.
-//  Copyright © 2020 Alex Balaria. All rights reserved.
+//  Created by OrbitalVitamin on 30/05/2020.
+//  Copyright © 2020 OrbitalVitamin. All rights reserved.
 //
 
 import Foundation

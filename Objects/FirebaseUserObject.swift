@@ -2,8 +2,8 @@
 //  FirebaseUserObject.swift
 //  TesProject
 //
-//  Created by Alex Balaria on 27/05/2020.
-//  Copyright © 2020 Alex Balaria. All rights reserved.
+//  Created by OrbitalVitamin on 27/05/2020.
+//  Copyright © 2020 OrbitalVitamin. All rights reserved.
 //
 
 import UIKit
